@@ -2,7 +2,8 @@ BRISC_simulation <- function(coords, sim_number = 1, seeds =  NULL, sigma.sq = 1
                              cov.model = "exponential", search.type = "tree", verbose = TRUE
 ){
 
-
+  n <- nrow(coords)
+  
   if(is.null(seeds)){
     sim <- matrix(rnorm(n*sim_number),n,sim_number)
   }
