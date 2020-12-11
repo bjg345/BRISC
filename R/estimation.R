@@ -97,7 +97,7 @@ BRISC_estimation <- function(coords, y, x = NULL, sigma.sq = 1, tau.sq = 0.1, ph
 
   ##estimtion
   result <- .Call("BRISC_estimatecpp", y, X, p, n, n.neighbors, coords, cov.model.indx, alpha.sq.starting, phi.starting, nu.starting, search.type.indx, n.omp.threads, verbose, eps, fix_nugget,
-                 package = "BRISC")
+                 PACKAGE = "BRISC")
 
   p2 <- proc.time()
 
