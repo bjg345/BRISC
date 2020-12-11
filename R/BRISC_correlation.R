@@ -70,7 +70,8 @@ BRISC_correlation <- function(coords, sim, sigma.sq = 1, tau.sq = 0, phi = 1, nu
 
 
   ##estimtion
-  result <- .Call("BRISC_correlationcpp", n, n.neighbors, coords, cov.model.indx, alpha.sq.starting, phi.starting, nu.starting, search.type.indx, n.omp.threads, verbose, sim, sim_number, fix_nugget)
+  result <- .Call("BRISC_correlationcpp", n, n.neighbors, coords, cov.model.indx, alpha.sq.starting, phi.starting, nu.starting, search.type.indx, n.omp.threads, verbose, sim, sim_number, fix_nugget,
+                 PACKAGE = "BRISC")
 
   p2 <- proc.time()
 
